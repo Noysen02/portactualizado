@@ -1,0 +1,18 @@
+<header>
+  <h1>{{title}}</h1>
+  <img src="{{img}}" alt="Foto de perfil" />
+  <nav>
+    <ul>
+      {{#with menuOptions}}
+        {{#each this}}
+          {{#if this.active}}
+            <li><span class="active">{{label}}</span></li>
+          {{else}}
+            <li><a href="{{url}}">{{label}}</a></li>
+          {{/if}}
+        {{/each}}
+      {{/with}}
+    </ul>
+  </nav>
+
+</header>
